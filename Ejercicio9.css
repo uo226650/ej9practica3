@@ -1,0 +1,41 @@
+body{
+    background-color:rgba(195, 176, 241, 0.767);
+    color:black;
+}
+h1{
+    text-align:center;
+    color:rgb(41, 10, 82);
+}
+h2{
+    text-align:center;
+    color:rgb(78, 78, 240);
+    font-size: 3em;
+}
+button{
+    font-size: 0.9em;
+    width: 10em;
+    height: 3em;
+}
+p{
+    font-size: 1.1em;
+    color:black;
+}
+div {
+    display: flex;
+    margin-top: 3em;
+}
+li {
+    text-align: center;
+    list-style-type: none;
+}
+ul{
+    padding: 0;
+    margin-right: 1em;
+}
+footer{
+       margin-top:2em;
+    }
+footer a img{
+        height:31px; 
+        width : 88px;
+    }

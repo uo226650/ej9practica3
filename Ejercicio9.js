@@ -1,12 +1,11 @@
 //API Key 9004b4b735351afc586781e759cdd9d9
-//API key uo226650 07b6411b853066034815f4b565dd1922
+//API key (uo226650) 07b6411b853066034815f4b565dd1922
 
 
 class Meteo {
     constructor(ciudad){
         this.apikey = "9004b4b735351afc586781e759cdd9d9";
         this.ciudad = ciudad;
-        //this.codigoPais = "ES";
         this.tipo = "&mode=xml";
         this.unidades = "&units=metric";
         this.idioma = "&lang=es";
@@ -24,7 +23,6 @@ class Meteo {
                     //console.log((new XMLSerializer()).serializeToString(datos));
                 
                     //Extracción de los datos contenidos en el XML
-                    //var totalNodos            = $('*',datos).length; // cuenta los elementos de XML: son los nodos del árbol DOM de XML
                     var ciudad                = $('city',datos).attr("name");
                     var longitud              = $('coord',datos).attr("lon");
                     var latitud               = $('coord',datos).attr("lat");
@@ -67,7 +65,7 @@ class Meteo {
                     var stringDatos =  "<h2>" + ciudad;
                         stringDatos += "<br></br><img src= '" + 
                             "https://openweathermap.org/img/wn/" + icono + "@2x.png '"  
-                            + "alt='Icono "+ descripcion + "'width='300px' heigth='300px' />" + "</h2>";
+                            + "alt='Icono "+ descripcion + "'width='300' heigth='300' />" + "</h2>";
                         stringDatos += "<ul><li>Longitud: " + longitud + " grados</li>";
                         stringDatos += "<li>Latitud: " + latitud + " grados</li>";
                         stringDatos += "<li>Amanece a las: " + amanecerLocal + "</li>";
@@ -100,14 +98,12 @@ class Meteo {
                 },
             error:function(){
                 $("h2").html("¡Tenemos problemas! No puedo obtener XML de <a href='http://openweathermap.org'>OpenWeatherMap</a>"); 
-                //$("div").remove();
                 }
         });
     }
 
     verXML(){
 
-        //$("h2").html("Datos " + this.ciudad);
         this.procesaXML();
     }
 }

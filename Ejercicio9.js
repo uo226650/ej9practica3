@@ -65,7 +65,7 @@ class Meteo {
                     var stringDatos =  "<h2>" + ciudad;
                         stringDatos += "<br></br><img src= '" + 
                             "https://openweathermap.org/img/wn/" + icono + "@2x.png '"  
-                            + "alt='Icono "+ descripcion + "'width='300' heigth='300' />" + "</h2>";
+                            + "alt='Icono "+ descripcion + "'width='300' height='300' />" + "</h2>";
                         stringDatos += "<ul><li>Longitud: " + longitud + " grados</li>";
                         stringDatos += "<li>Latitud: " + latitud + " grados</li>";
                         stringDatos += "<li>Amanece a las: " + amanecerLocal + "</li>";
